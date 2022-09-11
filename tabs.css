@@ -1,0 +1,47 @@
+/* Внешний вид */
+.tab    {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab__nav   {
+    display: flex;
+}
+
+.tab__nav-button    {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #f5f5f5;
+    border: 0;
+    border-right: 1px solid #bbb;
+    cursor: pointer;
+    text-overflow: ellipsis;
+}
+
+.rab__nav-button:last-child {
+    border-right: none;
+}
+
+.tab__nav-button:hover  {
+    background-color: #ddd;
+}
+
+.tab__nav-button.active {
+    background-color: #3d89df;
+    border-right-color: #0b6ddd;
+    color: #fff;
+}
+
+.tab__content   {
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Функциональные стили */
+.tab__block {
+    display: none;
+}
+
+.tab__block.active  {
+    display: block;
+}
