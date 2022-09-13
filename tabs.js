@@ -1,33 +1,34 @@
-// Поиск элементов на странице
-// Кнопки
-const  tabButtons = document.querySelectorAll('.tab__nav-button');
-// Блоки с контентом 
-const  tabBlocks = document.querySelectorAll('.tab__block');
+const tabs = document.querySelectorAll('[data-control="tab"]');
 
-// Обходим колекйцию кнопок через forEach
-tabButtons.forEach(function (item) {
-    // Для каждой кнопки запускаем прослушку события клик
-    item.addEventListener('click', function() {
-        const currentButton = item; //Кнопка по которой мы кликнули
-        const blockIdSelector = currentButton.getAttribute('data-tab');
-        const currentBlock = document.querySelector(blockIdSelector);
+tabs.forEach(function (tab) {
+    const tabButtons = tab.querySelectorAll('[data-control="tab-button"]');
+    const tabBlocks = tab.querySelectorAll('[data-control="tab-block"]');
 
-        // Снимаем активный класс со всех кнопок
-        tabButtons.forEach(function (item) {
-            item.classList.remove('active')
+    tabButtons.forEach(function (item, index) {
+        item.addEventListener('click', function(){
+            const currentButton = item; // Кнопка по которой мы кликнули
+            const contentBlocks = tab.querySelectorAll('[data-control="tab-block"]');
+            const currentBlock = contentBlocks[index];
+
+
+            if (!currentButton.classList.contains('active')) {
+                // Снимаем активный класс со всех кнопок
+                tabButtons.forEach(function (item) {
+                    item.classList.remove('active');
+                });
+
+                // Снимаем активный класс со всех блоков
+                tabBlocks.forEach(function (item) {
+                    item.classList.remove('active');
+                });
+
+                // Добавляем активный класс к кнопке по которой кликнули
+                currentButton.classList.add('active');
+                // Добавляем активный класс к блоки который нужно показать
+                currentBlock.classList.add('active');
+            }
+
+            
         });
-
-        // Снимаем активный класс с блоков
-        tabBlocks.forEach(function (item) {
-            item.classList.remove('active')
-        });
-
-        // Добавляем активный класс к кнопке по которой кликнули
-        currentButton.classList.add('active');
-
-        // Добавляем активный класс к блоку который нужно показать
-        currentBlock.classList.add('active')
     });
 })
-
-document.querySelector('.tab__nav-button').click();

@@ -4,34 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabs</title>
 
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./tabs.css">
 </head>
 <body>
-    <div class="tab">
+
+    <!-- Табы 01 -->
+    <div class="tab" data-control="tab">
 
         <!-- Навигация -->
-        <div class="tab__nav">
-            <button type="button" class="tab__nav-button" data-tab="#tab-1">Teb 1</button>
-            <button type="button" class="tab__nav-button" data-tab="#tab-2">Teb 2</button>
-            <button type="button" class="tab__nav-button" data-tab="#tab-3">Teb 3</button>
+        <div class="tab__nav" data-control="tab-nav">
+            <button type="button" class="tab__nav-button active"  data-control="tab-button">Teb 1</button>
+            <button type="button" class="tab__nav-button" data-control="tab-button">Teb 2</button>
+            <button type="button" class="tab__nav-button" data-control="tab-button">Teb 3</button>
         </div>
 
         <!-- Блоки с контентом -->
-        <div class="tab__content">
-            <div class="tab__block" id="tab-1">
+        <div class="tab__content"  data-control="tab-content">
+            <div class="tab__block active" data-control="tab-block">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, distinctio?</p>
             </div>
-            <div class="tab__block" id="tab-2">
+            <div class="tab__block" data-control="tab-block">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, labore commodi. Quia hic ad asperiores vitae similique aliquam, non voluptatum odit consequatur iure provident sint necessitatibus laborum. Quidem, eos error.</p>
             </div>
-            <div class="tab__block" id="tab-3">
+            <div class="tab__block" data-control="tab-block">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut consectetur ducimus molestias aspernatur odit? Eaque incidunt nostrum a sint nihil suscipit placeat optio, veniam nesciunt assumenda accusamus dolorum dolore adipisci.</p>
             </div>
         </div>
     </div>
+
+    <!-- Табы 02 -->
+    <div class="tab" data-control="tab">
+
+        <!-- Навигация -->
+        <div class="tab__nav" data-control="tab-nav">
+            <button type="button" class="tab__nav-button"  data-control="tab-button">Teb 1</button>
+            <button type="button" class="tab__nav-button active" data-control="tab-button">Teb 2</button>
+            <button type="button" class="tab__nav-button" data-control="tab-button">Teb 3</button>
+        </div>
+
+        <!-- Блоки с контентом -->
+        <div class="tab__content"  data-control="tab-content">
+            <div class="tab__block" data-control="tab-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, distinctio?</p>
+            </div>
+            <div class="tab__block active" data-control="tab-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, labore commodi. Quia hic ad asperiores vitae similique aliquam, non voluptatum odit consequatur iure provident sint necessitatibus laborum. Quidem, eos error.</p>
+            </div>
+            <div class="tab__block" data-control="tab-block">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut consectetur ducimus molestias aspernatur odit? Eaque incidunt nostrum a sint nihil suscipit placeat optio, veniam nesciunt assumenda accusamus dolorum dolore adipisci.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Табы 03 -->
+    <div class="tab" data-control="tab">
+
+        <!-- Навигация -->
+        <div class="tab__nav" data-control="tab-nav">
+            <button type="button" class="tab__nav-button"  data-control="tab-button">Teb 1</button>
+            <button type="button" class="tab__nav-button" data-control="tab-button">Teb 2</button>
+            <button type="button" class="tab__nav-button active" data-control="tab-button">Teb 3</button>
+        </div>
+
+        <!-- Блоки с контентом -->
+        <div class="tab__content"  data-control="tab-content">
+            <div class="tab__block" data-control="tab-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, distinctio?</p>
+            </div>
+            <div class="tab__block" data-control="tab-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, labore commodi. Quia hic ad asperiores vitae similique aliquam, non voluptatum odit consequatur iure provident sint necessitatibus laborum. Quidem, eos error.</p>
+            </div>
+            <div class="tab__block active" data-control="tab-block">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut consectetur ducimus molestias aspernatur odit? Eaque incidunt nostrum a sint nihil suscipit placeat optio, veniam nesciunt assumenda accusamus dolorum dolore adipisci.</p>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="./tabs.js"></script>
 </body>

@@ -4,6 +4,10 @@
     margin: 0 auto;
 }
 
+.tab + .tab {
+    margin-top: 50px;
+}
+
 .tab__nav   {
     display: flex;
 }
